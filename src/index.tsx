@@ -46,6 +46,8 @@ const FormField: React.FunctionComponent<FormFieldProps> = React.forwardRef((pro
   };
 
   return React.createElement<any>(component, fieldProps, children);
-})
+});
+
+FormField.displayName = 'FormField';
 
 export default FormField;

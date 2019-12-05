@@ -10,7 +10,7 @@
     "target": "es6",
     "outDir": "./dist",
     "sourceMap": true,
-    "rootDir": ".",
+    "rootDir": "./src",
     "checkJs": false,
     "allowJs": false,
     "removeComments": true,
