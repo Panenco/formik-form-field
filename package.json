@@ -12,7 +12,15 @@
   "repository": "git@github.com:Panenco/formik-form-field.git",
   "scripts": {
     "build": "rimraf dist && rollup -c",
-    "eslint": "eslint src --ext=jsx,ts,tsx"
+    "lint": "eslint src --ext=jsx,ts,tsx --fix",
+    "prettier": "prettier '{src}/**/*.{js,jsx,ts,tsx}' --write",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "peerDependencies": {
     "formik": "^2.0.6",

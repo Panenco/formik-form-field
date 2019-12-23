@@ -39,14 +39,12 @@ export default {
     }),
     resolve({
       browser: true,
-      extensions: ['.js', '.jsx', '.json', '.ts', 'tsx'],
-      preferBuiltins: false,
+      extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
       customResolveOptions: {
         moduleDirectory: ['node_modules', paths.src],
       },
     }),
     typescript({
-        rollupCommonJSResolveHack: true,
         clean: true
     }),
     commonjs({

@@ -32,7 +32,6 @@ const FormField: React.FunctionComponent<FormFieldProps> = React.forwardRef((pro
   const { component, valueAdapter, onChangeAdapter, children, ...leftProps } = props;
 
   const onChange = (...args) => {
-    const { onChangeAdapter } = props;
     formik.setFieldValue(props.name as never, onChangeAdapter(...args));
   };
 
