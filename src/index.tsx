@@ -41,6 +41,7 @@ const FormField: React.FunctionComponent<FormFieldProps> = React.forwardRef((pro
     ...field,
     ...leftProps,
     ...meta,
+    error: meta.touched && meta.error,
     value: valueAdapter ? valueAdapter(field.value) : field.value,
     onChange: onChangeAdapter ? onChange : field.onChange,
     onBlur,
