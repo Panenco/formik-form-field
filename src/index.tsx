@@ -24,6 +24,10 @@ export interface FormFieldProps {
 export const isFunction = (obj: any): obj is Function => typeof obj === 'function';
 
 const FormField: React.FunctionComponent<FormFieldProps> = React.forwardRef((props, ref) => {
+  if (!props.name) {
+    console.warn(`Your field doesn't have any name property.`);
+  }
+
   const formik = useFormikContext();
   const [field, meta] = useField(props);
 
