@@ -4,10 +4,9 @@
 
 ## Installation
 
-To install breadcrumbs from Panenco's registry follow next steps:
+To install follow next steps:
 
-1. Create `.npmrc` file with the next content `registry=https://npm.pkg.github.com/Panenco` near to your `package.json` file you want to add this package to
-2. `npm install @panenco/formik-field-wrapper`
+1. `npm install @panenco/formik-field-wrapper`
 
 ## Usage
 
@@ -33,16 +32,16 @@ const FormComponent = () => {
         name="birthDate"
         component={DayPicker}
         labelText="Date of birth"
-        onChangeAdapter={v => v}
-        valueAdapter={v => v}
+        onChangeAdapter={(v) => v}
+        valueAdapter={(v) => v}
       />
       <Field
         name="country"
         component={ReactSelect}
         options={countries}
         label="Country of origin"
-        onChangeAdapter={v => v.value}
-        valueAdapter={value => countries.find(country => value === country.value)}
+        onChangeAdapter={(v) => v.value}
+        valueAdapter={(value) => countries.find((country) => value === country.value)}
       />
       <PrimaryButton type="submit">Submit</PrimaryButton>
     </Form>
