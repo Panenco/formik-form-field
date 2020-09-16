@@ -1,0 +1,11 @@
+src
+.editorconfig
+.prettierrc
+.eslintrc.json
+rollup.config.js
+tsconfig.json
+commitlint.config.js
+*.lock
+*.log
+.github
+LICENSE
